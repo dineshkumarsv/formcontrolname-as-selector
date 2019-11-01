@@ -1,0 +1,9 @@
+<form [formGroup]="paymentForm">
+	<input type="text" formControlName="cardNumber" placeholder="Card Number">
+	<input type="text"  formControlName="a" placeholder="other feild">
+
+  <select formControlName="country" (change)="isCardNumNull()">
+        <option *ngFor="let contry of countries" [value]="contry.id">{{contry.name}}</option>
+      </select>
+
+</form>
